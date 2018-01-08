@@ -1,0 +1,126 @@
+body {
+	background: #000;
+	font-family: Verdana;
+}
+
+.loader {
+	width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fc0;
+	text-align: center;
+}
+
+.loader div.bar {
+	width: 10px;
+	height: 30px;
+	background-color: #fc0;
+	display: inline-block;
+}
+
+.loader div.text, .loader2 div.text {
+	display: block;
+	font-size: 26px;
+}
+
+.loader div.bar1{
+	animation: bar_anim 1s linear infinite;
+ }
+.loader div.bar2 {
+	animation: bar_anim 1s linear -0.25s infinite;
+}
+.loader div.bar3 {
+	animation: bar_anim 1s linear -0.5s infinite;
+}
+
+.loader2 {
+	width: 80px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	color: #fc0;
+	text-align: center;
+}
+
+.loader2 .round {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border-top: 5px solid #ccc;
+	border-right: 5px solid #ccc;
+	/*border-bottom: 5px solid #ccc;*/
+	animation: round 2s linear infinite;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+	background-color: #fc0;
+	padding: 20px;
+	margin: 50px auto 0px auto;
+	border-radius: 40px;
+	animation: redim 5s ease infinite;
+	font-size: 28px;
+	text-align: center;
+}
+
+@keyframes bar_anim {
+	0%{
+		transform: scaleY(0);
+		opacity: 1;
+	}
+	50%{
+		transform: scaleY(1);
+		opacity: 0.4;
+	}
+	100%{
+		transform: scaleY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes round {
+	0%{
+		transform: rotate(0deg);
+		opacity: 1;
+	}
+	50%{
+		transform: rotate(180deg);
+		opacity: 0.4;
+	}
+	100%{
+		transform: rotate(360deg);
+		opacity: 1;
+	}
+}
+
+@keyframes redim {
+	0%{
+		/*transform: rotate(180deg);
+		width: 0px;
+		height: 0px;
+		opacity: 0;
+		font-size: 2px;*/
+	}
+	25%{
+		/*transform: rotate(360deg);*/
+		width: 200px;
+		height: 200px;
+		font-size: 28px;
+		background-color: #f00;
+		border-radius: 50%;
+		color: #fff;
+	}
+	50%{
+		width: 500px;
+		height: 100px;
+		background-color: #0f0;
+		border-radius: 0;
+	}
+	75%{
+		width: 50px;
+		height: 300px;
+		background-color: #00f;
+		border-radius: 0;
+	}
+}
